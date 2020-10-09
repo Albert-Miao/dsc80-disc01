@@ -36,6 +36,6 @@ def ends_in_9(arr):
     True
     """
 
-    arr = arr % 0.1
+    arr = np.round(arr % 0.1, decimals=2)
 
     return np.where(arr == 0.09, 1, 0).mean()
